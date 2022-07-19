@@ -1,0 +1,11 @@
+CLASSGROUP "label"
+CLASS
+  GROUP "label"
+  TEXT "[statnaam]"
+  LABEL
+    COLOR "#000000"
+    FONT "arial"
+    TYPE truetype
+    SIZE 10.0
+  END #LABEL
+END # CLASS

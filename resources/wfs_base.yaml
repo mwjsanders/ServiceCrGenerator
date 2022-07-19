@@ -1,0 +1,84 @@
+apiVersion: pdok.nl/v2beta1
+kind: WFS
+metadata:
+  name: ""
+  labels:
+    dataset: gebiedsindelingen
+    dataset-owner: cbs
+    theme: ""
+    service-version: v1_0-preprod
+    service-type: wfs
+spec:
+  general:
+    dataset: gebiedsindelingen
+    datasetOwner: cbs
+    theme: ""
+    serviceVersion: v1_0-preprod
+  kubernetes:
+    healthCheck:
+      mimetype: text/xml
+      querystring: SERVICE=WFS&VERSION=2.0.0&REQUEST=GetCapabilities
+    resources:
+      limits:
+        ephemeralStorage: 512Mi
+  options:
+    automaticCasing: false
+    includeIngress: true
+  service:
+    inspire: true
+    title: ""
+    abstract: ""
+    authority:
+      name: cbs
+      url: https://www.cbs.nl/
+    dataEPSG: EPSG:28992
+    extent: 13900 307500 277500 611500
+    keywords:
+      - Arbeidsmarktregio
+      - Jeugdregio
+      - Arrondissementsgebied
+      - Brandweerregio
+      - Buurt
+      - COROP-gebied
+      - COROP-plusgebied
+      - COROP-subgebied
+      - GGD-regio
+      - Gebiedsindeling
+      - Gemeente
+      - Grootstedelijke aglomeratie
+      - Kamer van Koophandelregio
+      - Landbouwgebied
+      - Landbouwgroep
+      - Landsdeel
+      - NUTS1
+      - NUTS2
+      - NUTS3
+      - Politieregio
+      - Provincie
+      - RPA-gebied
+      - Regionale Eenheid
+      - Stadsgewest
+      - Statistische eenheden
+      - Toeristengebied
+      - Toeristengroep
+      - Veiligheidsregio
+      - Wijk
+      - Zorgkantoorregio
+    featureTypes:
+      - name: ""
+        title: ""
+        keywords:
+          - features
+        sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+        datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+        data:
+          gpkg:
+            columns:
+              - id
+              - statcode
+              - statnaam
+              - jrstatcode
+              - rubriek
+            geometryType: ""
+            s3Key: ""
+            table: ""

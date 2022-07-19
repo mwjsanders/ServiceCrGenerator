@@ -1,0 +1,101 @@
+apiVersion: pdok.nl/v2beta1
+kind: WMS
+metadata:
+  name: ""
+  labels:
+    dataset: gebiedsindelingen
+    dataset-owner: cbs
+    theme: ""
+    service-version: v1_0-preprod
+    service-type: wms
+spec:
+  general:
+    datasetOwner: cbs
+    dataset: gebiedsindelingen
+    theme: "2002"
+    serviceVersion: v1_0-preprod
+  kubernetes:
+    healthCheck:
+      boundingbox: 123178.6319959907123,486742.0406347024837,123970.242244208479,487231.8342836765223
+    resources:
+      limits:
+        ephemeralStorage: 512Mi
+  options:
+    automaticCasing: true
+    disableWebserviceProxy: false
+    includeIngress: true
+    validateRequests: true
+  service:
+    inspire: true
+    title: CBS Gebiedsindelingen WMS
+    abstract: ""
+    keywords:
+      - Arbeidsmarktregio
+      - Jeugdregio
+      - Arrondissementsgebied
+      - Brandweerregio
+      - Buurt
+      - COROP-gebied
+      - COROP-plusgebied
+      - COROP-subgebied
+      - GGD-regio
+      - Gebiedsindeling
+      - Gemeente
+      - Grootstedelijke aglomeratie
+      - Kamer van Koophandelregio
+      - Landbouwgebied
+      - Landbouwgroep
+      - Landsdeel
+      - NUTS1
+      - NUTS2
+      - NUTS3
+      - Politieregio
+      - Provincie
+      - RPA-gebied
+      - Regionale Eenheid
+      - Stadsgewest
+      - Statistische eenheden
+      - Toeristengebied
+      - Toeristengroep
+      - Veiligheidsregio
+      - Wijk
+      - Zorgkantoorregio
+      - infoMapAccessService
+    authority:
+      name: cbs
+      url: http://www.cbs.nl
+    dataEPSG: "EPSG:28992"
+    extent: 13900 307500 277500 611500
+    stylingAssets:
+      configMapRefs:
+        - name: styling
+      s3Keys:
+        - ${S3_RESOURCES_BUCKET}/fonts/liberation-sans-bold.ttf
+    layers:
+      - name: ""
+        title: ""
+        abstract: ""
+        keywords:
+          - features
+        visible: true
+        data:
+          gpkg:
+            columns:
+              - fid
+              - id
+              - statcode
+              - statnaam
+              - jrstatcode
+              - rubriek
+              - geom
+            geometryType: Point
+            s3Key: geopackages/cbs/gebiedsindelingen/e7a0d159-c352-40af-87ff-a65dc54273e6/cbsgebiedsindelingen2002.gpkg
+            table: cbs_arrondissementsgebied_2002_labelpoint
+        datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+        sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+        styles:
+          - name: cbs_gebiedsindeling
+            title: cbs_gebiedsindeling
+            visualization: cbs_gebiedsindeling.style
+    includes:
+      - configMap: wms-includes

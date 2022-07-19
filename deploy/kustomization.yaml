@@ -1,0 +1,25 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+commonLabels:
+  dataset: gebiedsindelingen
+  dataset-owner: cbs
+  service-version: v1_0
+
+resources:
+  - wms.yaml
+
+configMapGenerator:
+  - name: cbs-cbsgebiedsindelingen-wms-v1-0-includes
+    files:
+      - styles/buurten.style
+      - styles/gebiedsindelingen.style
+      - styles/label.style
+      - styles/wijken.style
+
+vars:
+  - name: INCLUDES
+    objref:
+      name: cbs-cbsgebiedsindelingen-wms-v1-0-includes
+      apiVersion: v1
+      kind: ConfigMap

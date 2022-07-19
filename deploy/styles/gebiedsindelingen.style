@@ -1,0 +1,8 @@
+CLASSGROUP "gebiedsindelingen"
+CLASS
+  GROUP "gebiedsindelingen"
+  STYLE
+    OUTLINECOLOR "#000000"
+    WIDTH 1.2
+  END # STYLE
+END # CLASS

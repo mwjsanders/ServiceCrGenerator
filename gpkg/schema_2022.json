@@ -1,0 +1,1832 @@
+{
+    "geopackage_validator_version": "0.6.4",
+    "projection": 28992,
+    "tables": [
+        {
+            "name": "cbs_arbeidsmarktregio_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_arrondissementsgebied_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_buurt_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "gm_code",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_buurt_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "gm_code",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_coropgebied_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_coropplusgebied_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_coropsubgebied_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_gemeente_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_ggdregio_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_jeugdregio_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_kamervankoophandelregio_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_landbouwgebied_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_landbouwgroep_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_landsdeel_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_provincie_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_regionaalmeld_coordinatiepunt_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_regionale_energiestrategie_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_regioplus_arbeidsmarktregio_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_ressort_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_subres_regio_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_toeristengebied_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_toeristengroep_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_veiligheidsregio_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_veiligthuisregio_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_wijk_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "gm_code",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_wijk_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "gm_code",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_zorgkantoorregio_2022_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_buurt_2022_niet_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "gm_code",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_gemeente_2022_niet_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_wijk_2022_niet_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "gm_code",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_arbeidsmarktregio_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_arrondissementsgebied_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_coropgebied_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_coropplusgebied_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_coropsubgebied_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_gemeente_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_ggdregio_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_jeugdregio_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_kamervankoophandelregio_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_landbouwgebied_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_landbouwgroep_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_landsdeel_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_provincie_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_regionaalmeld_coordinatiepunt_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_regionale_energiestrategie_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_regioplus_arbeidsmarktregio_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_ressort_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_subres_regio_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_toeristengebied_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_toeristengroep_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_veiligheidsregio_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_veiligthuisregio_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_zorgkantoorregio_2022_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        }
+    ]
+}

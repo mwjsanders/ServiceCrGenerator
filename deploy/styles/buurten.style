@@ -1,0 +1,8 @@
+CLASSGROUP "buurten"
+CLASS
+  GROUP "buurten"
+  STYLE
+    OUTLINECOLOR "#000000"
+    WIDTH 0.8
+  END # STYLE
+END # CLASS

@@ -1,0 +1,1070 @@
+apiVersion: pdok.nl/v2beta1
+kind: WFS
+metadata:
+  name: "2021"
+  labels:
+    dataset-owner: cbs
+    dataset: gebiedsindelingen
+    theme: "2021"
+    service-version: v1_0-preprod
+    service-type: wfs
+spec:
+  general:
+    datasetOwner: cbs
+    dataset: gebiedsindelingen
+    theme: "2021"
+    serviceVersion: v1_0-preprod
+  kubernetes:
+    healthCheck:
+      mimetype: text/xml
+      querystring: SERVICE=WFS&VERSION=2.0.0&REQUEST=GetCapabilities
+    resources:
+      limits:
+        ephemeralStorage: 512Mi
+  options:
+    automaticCasing: false
+    includeIngress: true
+  service:
+    inspire: true
+    title: CBS Gebiedsindelingen 2021 WFS
+    abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2021. De volgende gebiedsindelingen
+      kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied GGD-regio
+      NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied Landbouwgroep
+      RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied KamervanKoophandelregio
+      Regionale-Eenheid Veiligheidsregio Veiligthuisregio Zorgkantoorregio Arbeidsmarktregio
+      Regioplus-arbeidsmarktregio Jeugdregio Ressort RES-regio Regionaalmeldcoördinatiepunt
+      Regionale-energiestrategie SubRES-regio'
+    keywords:
+    - Arbeidsmarktregio
+    - Jeugdregio
+    - Arrondissementsgebied
+    - Brandweerregio
+    - Buurt
+    - COROP-gebied
+    - COROP-plusgebied
+    - COROP-subgebied
+    - GGD-regio
+    - Gebiedsindeling
+    - Gemeente
+    - Grootstedelijke aglomeratie
+    - Kamer van Koophandelregio
+    - Landbouwgebied
+    - Landbouwgroep
+    - Landsdeel
+    - NUTS1
+    - NUTS2
+    - NUTS3
+    - Politieregio
+    - Provincie
+    - RPA-gebied
+    - Regionale Eenheid
+    - Stadsgewest
+    - Statistische eenheden
+    - Toeristengebied
+    - Toeristengroep
+    - Veiligheidsregio
+    - Wijk
+    - Zorgkantoorregio
+    extent: 13900 307500 277500 611500
+    metadataIdentifier: 9c4c9bbc-4746-414b-9599-b67db6de1d6d
+    authority:
+      name: cbs
+      url: https://www.cbs.nl/
+    dataEPSG: EPSG:28992
+    featureTypes:
+    - name: arbeidsmarktregio_gegeneraliseerd
+      title: arbeidsmarktregio_gegeneraliseerd
+      abstract: arbeidsmarktregio_gegeneraliseerd
+      keywords:
+      - arbeidsmarktregio_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_arbeidsmarktregio_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: arbeidsmarktregio_labelpoint
+      title: arbeidsmarktregio_labelpoint
+      abstract: arbeidsmarktregio_labelpoint
+      keywords:
+      - arbeidsmarktregio_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_arbeidsmarktregio_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: arrondissementsgebied_gegeneraliseerd
+      title: arrondissementsgebied_gegeneraliseerd
+      abstract: arrondissementsgebied_gegeneraliseerd
+      keywords:
+      - arrondissementsgebied_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_arrondissementsgebied_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: arrondissementsgebied_labelpoint
+      title: arrondissementsgebied_labelpoint
+      abstract: arrondissementsgebied_labelpoint
+      keywords:
+      - arrondissementsgebied_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_arrondissementsgebied_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: buurt_gegeneraliseerd
+      title: buurt_gegeneraliseerd
+      abstract: buurt_gegeneraliseerd
+      keywords:
+      - buurt_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_buurt_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - statcode
+          - jrstatcode
+          - statnaam
+          - gm_code
+          - rubriek
+          - id
+    - name: buurt_labelpoint
+      title: buurt_labelpoint
+      abstract: buurt_labelpoint
+      keywords:
+      - buurt_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_buurt_2021_labelpoint
+          geometryType: Point
+          columns:
+          - statcode
+          - jrstatcode
+          - statnaam
+          - gm_code
+          - rubriek
+          - id
+    - name: buurt_niet_gegeneraliseerd
+      title: buurt_niet_gegeneraliseerd
+      abstract: buurt_niet_gegeneraliseerd
+      keywords:
+      - buurt_niet_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_buurt_2021_niet_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - statcode
+          - jrstatcode
+          - statnaam
+          - gm_code
+          - rubriek
+          - id
+    - name: coropgebied_gegeneraliseerd
+      title: coropgebied_gegeneraliseerd
+      abstract: coropgebied_gegeneraliseerd
+      keywords:
+      - coropgebied_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_coropgebied_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: coropgebied_labelpoint
+      title: coropgebied_labelpoint
+      abstract: coropgebied_labelpoint
+      keywords:
+      - coropgebied_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_coropgebied_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: coropplusgebied_gegeneraliseerd
+      title: coropplusgebied_gegeneraliseerd
+      abstract: coropplusgebied_gegeneraliseerd
+      keywords:
+      - coropplusgebied_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_coropplusgebied_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: coropplusgebied_labelpoint
+      title: coropplusgebied_labelpoint
+      abstract: coropplusgebied_labelpoint
+      keywords:
+      - coropplusgebied_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_coropplusgebied_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: coropsubgebied_gegeneraliseerd
+      title: coropsubgebied_gegeneraliseerd
+      abstract: coropsubgebied_gegeneraliseerd
+      keywords:
+      - coropsubgebied_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_coropsubgebied_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: coropsubgebied_labelpoint
+      title: coropsubgebied_labelpoint
+      abstract: coropsubgebied_labelpoint
+      keywords:
+      - coropsubgebied_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_coropsubgebied_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: gemeente_gegeneraliseerd
+      title: gemeente_gegeneraliseerd
+      abstract: gemeente_gegeneraliseerd
+      keywords:
+      - gemeente_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_gemeente_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: gemeente_labelpoint
+      title: gemeente_labelpoint
+      abstract: gemeente_labelpoint
+      keywords:
+      - gemeente_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_gemeente_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: gemeente_niet_gegeneraliseerd
+      title: gemeente_niet_gegeneraliseerd
+      abstract: gemeente_niet_gegeneraliseerd
+      keywords:
+      - gemeente_niet_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_gemeente_2021_niet_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: ggdregio_gegeneraliseerd
+      title: ggdregio_gegeneraliseerd
+      abstract: ggdregio_gegeneraliseerd
+      keywords:
+      - ggdregio_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_ggdregio_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: ggdregio_labelpoint
+      title: ggdregio_labelpoint
+      abstract: ggdregio_labelpoint
+      keywords:
+      - ggdregio_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_ggdregio_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: jeugdregio_gegeneraliseerd
+      title: jeugdregio_gegeneraliseerd
+      abstract: jeugdregio_gegeneraliseerd
+      keywords:
+      - jeugdregio_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_jeugdregio_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: jeugdregio_labelpoint
+      title: jeugdregio_labelpoint
+      abstract: jeugdregio_labelpoint
+      keywords:
+      - jeugdregio_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_jeugdregio_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: kamervankoophandelregio_gegeneraliseerd
+      title: kamervankoophandelregio_gegeneraliseerd
+      abstract: kamervankoophandelregio_gegeneraliseerd
+      keywords:
+      - kamervankoophandelregio_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_kamervankoophandelregio_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: kamervankoophandelregio_labelpoint
+      title: kamervankoophandelregio_labelpoint
+      abstract: kamervankoophandelregio_labelpoint
+      keywords:
+      - kamervankoophandelregio_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_kamervankoophandelregio_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: landbouwgebied_gegeneraliseerd
+      title: landbouwgebied_gegeneraliseerd
+      abstract: landbouwgebied_gegeneraliseerd
+      keywords:
+      - landbouwgebied_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_landbouwgebied_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: landbouwgebied_labelpoint
+      title: landbouwgebied_labelpoint
+      abstract: landbouwgebied_labelpoint
+      keywords:
+      - landbouwgebied_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_landbouwgebied_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: landbouwgroep_gegeneraliseerd
+      title: landbouwgroep_gegeneraliseerd
+      abstract: landbouwgroep_gegeneraliseerd
+      keywords:
+      - landbouwgroep_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_landbouwgroep_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: landbouwgroep_labelpoint
+      title: landbouwgroep_labelpoint
+      abstract: landbouwgroep_labelpoint
+      keywords:
+      - landbouwgroep_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_landbouwgroep_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: landsdeel_gegeneraliseerd
+      title: landsdeel_gegeneraliseerd
+      abstract: landsdeel_gegeneraliseerd
+      keywords:
+      - landsdeel_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_landsdeel_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: landsdeel_labelpoint
+      title: landsdeel_labelpoint
+      abstract: landsdeel_labelpoint
+      keywords:
+      - landsdeel_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_landsdeel_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: provincie_gegeneraliseerd
+      title: provincie_gegeneraliseerd
+      abstract: provincie_gegeneraliseerd
+      keywords:
+      - provincie_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_provincie_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: provincie_labelpoint
+      title: provincie_labelpoint
+      abstract: provincie_labelpoint
+      keywords:
+      - provincie_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_provincie_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: regionaalmeld_coordinatiepunt_gegeneraliseerd
+      title: regionaalmeld_coordinatiepunt_gegeneraliseerd
+      abstract: regionaalmeld_coordinatiepunt_gegeneraliseerd
+      keywords:
+      - regionaalmeld_coordinatiepunt_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_regionaalmeld_coordinatiepunt_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: regionaalmeld_coordinatiepunt_labelpoint
+      title: regionaalmeld_coordinatiepunt_labelpoint
+      abstract: regionaalmeld_coordinatiepunt_labelpoint
+      keywords:
+      - regionaalmeld_coordinatiepunt_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_regionaalmeld_coordinatiepunt_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: regionale_eenheid_gegeneraliseerd
+      title: regionale_eenheid_gegeneraliseerd
+      abstract: regionale_eenheid_gegeneraliseerd
+      keywords:
+      - regionale_eenheid_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_regionale_eenheid_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: regionale_eenheid_labelpoint
+      title: regionale_eenheid_labelpoint
+      abstract: regionale_eenheid_labelpoint
+      keywords:
+      - regionale_eenheid_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_regionale_eenheid_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: regionale_energiestrategie_gegeneraliseerd
+      title: regionale_energiestrategie_gegeneraliseerd
+      abstract: regionale_energiestrategie_gegeneraliseerd
+      keywords:
+      - regionale_energiestrategie_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_regionale_energiestrategie_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: regionale_energiestrategie_labelpoint
+      title: regionale_energiestrategie_labelpoint
+      abstract: regionale_energiestrategie_labelpoint
+      keywords:
+      - regionale_energiestrategie_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_regionale_energiestrategie_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: regioplus_arbeidsmarktregio_gegeneraliseerd
+      title: regioplus_arbeidsmarktregio_gegeneraliseerd
+      abstract: regioplus_arbeidsmarktregio_gegeneraliseerd
+      keywords:
+      - regioplus_arbeidsmarktregio_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_regioplus_arbeidsmarktregio_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: regioplus_arbeidsmarktregio_labelpoint
+      title: regioplus_arbeidsmarktregio_labelpoint
+      abstract: regioplus_arbeidsmarktregio_labelpoint
+      keywords:
+      - regioplus_arbeidsmarktregio_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_regioplus_arbeidsmarktregio_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: ressort_gegeneraliseerd
+      title: ressort_gegeneraliseerd
+      abstract: ressort_gegeneraliseerd
+      keywords:
+      - ressort_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_ressort_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: ressort_labelpoint
+      title: ressort_labelpoint
+      abstract: ressort_labelpoint
+      keywords:
+      - ressort_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_ressort_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: subres_regio_gegeneraliseerd
+      title: subres_regio_gegeneraliseerd
+      abstract: subres_regio_gegeneraliseerd
+      keywords:
+      - subres_regio_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_subres_regio_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: subres_regio_labelpoint
+      title: subres_regio_labelpoint
+      abstract: subres_regio_labelpoint
+      keywords:
+      - subres_regio_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_subres_regio_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: toeristengebied_gegeneraliseerd
+      title: toeristengebied_gegeneraliseerd
+      abstract: toeristengebied_gegeneraliseerd
+      keywords:
+      - toeristengebied_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_toeristengebied_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: toeristengebied_labelpoint
+      title: toeristengebied_labelpoint
+      abstract: toeristengebied_labelpoint
+      keywords:
+      - toeristengebied_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_toeristengebied_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: toeristengroep_gegeneraliseerd
+      title: toeristengroep_gegeneraliseerd
+      abstract: toeristengroep_gegeneraliseerd
+      keywords:
+      - toeristengroep_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_toeristengroep_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: toeristengroep_labelpoint
+      title: toeristengroep_labelpoint
+      abstract: toeristengroep_labelpoint
+      keywords:
+      - toeristengroep_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_toeristengroep_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: veiligheidsregio_gegeneraliseerd
+      title: veiligheidsregio_gegeneraliseerd
+      abstract: veiligheidsregio_gegeneraliseerd
+      keywords:
+      - veiligheidsregio_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_veiligheidsregio_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: veiligheidsregio_labelpoint
+      title: veiligheidsregio_labelpoint
+      abstract: veiligheidsregio_labelpoint
+      keywords:
+      - veiligheidsregio_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_veiligheidsregio_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: veiligthuisregio_gegeneraliseerd
+      title: veiligthuisregio_gegeneraliseerd
+      abstract: veiligthuisregio_gegeneraliseerd
+      keywords:
+      - veiligthuisregio_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_veiligthuisregio_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: veiligthuisregio_labelpoint
+      title: veiligthuisregio_labelpoint
+      abstract: veiligthuisregio_labelpoint
+      keywords:
+      - veiligthuisregio_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_veiligthuisregio_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: wijk_gegeneraliseerd
+      title: wijk_gegeneraliseerd
+      abstract: wijk_gegeneraliseerd
+      keywords:
+      - wijk_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_wijk_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - statcode
+          - jrstatcode
+          - statnaam
+          - gm_code
+          - rubriek
+          - id
+    - name: wijk_labelpoint
+      title: wijk_labelpoint
+      abstract: wijk_labelpoint
+      keywords:
+      - wijk_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_wijk_2021_labelpoint
+          geometryType: Point
+          columns:
+          - statcode
+          - jrstatcode
+          - statnaam
+          - gm_code
+          - rubriek
+          - id
+    - name: wijk_niet_gegeneraliseerd
+      title: wijk_niet_gegeneraliseerd
+      abstract: wijk_niet_gegeneraliseerd
+      keywords:
+      - wijk_niet_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_wijk_2021_niet_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - statcode
+          - jrstatcode
+          - statnaam
+          - gm_code
+          - rubriek
+          - id
+    - name: zorgkantoorregio_gegeneraliseerd
+      title: zorgkantoorregio_gegeneraliseerd
+      abstract: zorgkantoorregio_gegeneraliseerd
+      keywords:
+      - zorgkantoorregio_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_zorgkantoorregio_2021_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: zorgkantoorregio_labelpoint
+      title: zorgkantoorregio_labelpoint
+      abstract: zorgkantoorregio_labelpoint
+      keywords:
+      - zorgkantoorregio_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2019-2015-7e65f530188d
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      data:
+        gpkg:
+          s3Key: ${S3_GEOPACKAGES_BUCKET}/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2021.gpkg
+          table: cbs_zorgkantoorregio_2021_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek

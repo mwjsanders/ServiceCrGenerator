@@ -1,0 +1,1677 @@
+apiVersion: pdok.nl/v2beta1
+kind: WMS
+metadata:
+  name: "2020"
+  labels:
+    dataset-owner: cbs
+    dataset: gebiedsindelingen
+    theme: "2020"
+    service-version: v1_0-preprod
+    service-type: wms
+spec:
+  general:
+    datasetOwner: cbs
+    dataset: gebiedsindelingen
+    theme: "2020"
+    serviceVersion: v1_0-preprod
+  kubernetes:
+    healthCheck:
+      boundingbox: 123178.6319959907123,486742.0406347024837,123970.242244208479,487231.8342836765223
+    resources:
+      limits:
+        ephemeralStorage: 512Mi
+  options:
+    automaticCasing: true
+    disableWebserviceProxy: false
+    includeIngress: true
+    validateRequests: true
+  service:
+    inspire: true
+    title: CBS Gebiedsindelingen WMS voor 2020
+    abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende gebiedsindelingen
+      kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied GGD-regio
+      NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied Landbouwgroep
+      RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied KamervanKoophandelregio
+      Regionale-Eenheid Veiligheidsregio Veiligthuisregio Zorgkantoorregio Arbeidsmarktregio
+      Regioplus-arbeidsmarktregio Jeugdregio Ressort RES-regio Regionaalmeldcoördinatiepunt
+      Regionale-energiestrategie SubRES-regio'
+    keywords:
+    - Arbeidsmarktregio
+    - Jeugdregio
+    - Arrondissementsgebied
+    - Brandweerregio
+    - Buurt
+    - COROP-gebied
+    - COROP-plusgebied
+    - COROP-subgebied
+    - GGD-regio
+    - Gebiedsindeling
+    - Gemeente
+    - Grootstedelijke aglomeratie
+    - Kamer van Koophandelregio
+    - Landbouwgebied
+    - Landbouwgroep
+    - Landsdeel
+    - NUTS1
+    - NUTS2
+    - NUTS3
+    - Politieregio
+    - Provincie
+    - RPA-gebied
+    - Regionale Eenheid
+    - Stadsgewest
+    - Statistische eenheden
+    - Toeristengebied
+    - Toeristengroep
+    - Veiligheidsregio
+    - Wijk
+    - Zorgkantoorregio
+    - infoMapAccessService
+    metadataIdentifier: 991033b9-73de-4abb-9e5e-269a39152852
+    authority:
+      name: cbs
+      url: http://www.cbs.nl
+    dataEPSG: EPSG:28992
+    extent: 13900 307500 277500 611500
+    stylingAssets:
+      configMapRefs:
+      - name: styling
+      s3Keys:
+      - ${S3_RESOURCES_BUCKET}/fonts/liberation-sans-bold.ttf
+    layers:
+    - name: arbeidsmarktregio_gegeneraliseerd
+      title: arbeidsmarktregio_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - arbeidsmarktregio_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_arbeidsmarktregio_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: arbeidsmarktregio_labelpoint
+      title: arbeidsmarktregio_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - arbeidsmarktregio_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_arbeidsmarktregio_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: arrondissementsgebied_gegeneraliseerd
+      title: arrondissementsgebied_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - arrondissementsgebied_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_arrondissementsgebied_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: arrondissementsgebied_labelpoint
+      title: arrondissementsgebied_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - arrondissementsgebied_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_arrondissementsgebied_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: buurt_gegeneraliseerd
+      title: buurt_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - buurt_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_buurten
+        name: cbs_buurten
+        visualization: cbs_buurten.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_buurt_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - gm_code
+          - rubriek
+    - name: buurt_labelpoint
+      title: buurt_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - buurt_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_buurt_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - gm_code
+          - rubriek
+    - name: buurt_niet_gegeneraliseerd
+      title: buurt_niet_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - buurt_niet_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_buurten
+        name: cbs_buurten
+        visualization: cbs_buurten.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_buurt_2020_niet_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - gm_code
+          - rubriek
+    - name: coropgebied_gegeneraliseerd
+      title: coropgebied_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - coropgebied_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_coropgebied_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: coropgebied_labelpoint
+      title: coropgebied_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - coropgebied_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_coropgebied_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: coropplusgebied_gegeneraliseerd
+      title: coropplusgebied_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - coropplusgebied_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_coropplusgebied_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: coropplusgebied_labelpoint
+      title: coropplusgebied_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - coropplusgebied_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_coropplusgebied_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: coropsubgebied_gegeneraliseerd
+      title: coropsubgebied_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - coropsubgebied_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_coropsubgebied_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: coropsubgebied_labelpoint
+      title: coropsubgebied_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - coropsubgebied_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_coropsubgebied_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: gemeente_gegeneraliseerd
+      title: gemeente_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - gemeente_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_gemeente_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: gemeente_labelpoint
+      title: gemeente_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - gemeente_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_gemeente_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: gemeente_niet_gegeneraliseerd
+      title: gemeente_niet_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - gemeente_niet_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_gemeente_2020_niet_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: ggdregio_gegeneraliseerd
+      title: ggdregio_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - ggdregio_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_ggdregio_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: ggdregio_labelpoint
+      title: ggdregio_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - ggdregio_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_ggdregio_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: jeugdregio_gegeneraliseerd
+      title: jeugdregio_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - jeugdregio_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_jeugdregio_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: jeugdregio_labelpoint
+      title: jeugdregio_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - jeugdregio_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_jeugdregio_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: kamervankoophandelregio_gegeneraliseerd
+      title: kamervankoophandelregio_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - kamervankoophandelregio_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_kamervankoophandelregio_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: kamervankoophandelregio_labelpoint
+      title: kamervankoophandelregio_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - kamervankoophandelregio_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_kamervankoophandelregio_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: landbouwgebied_gegeneraliseerd
+      title: landbouwgebied_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - landbouwgebied_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_landbouwgebied_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: landbouwgebied_labelpoint
+      title: landbouwgebied_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - landbouwgebied_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_landbouwgebied_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: landbouwgroep_gegeneraliseerd
+      title: landbouwgroep_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - landbouwgroep_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_landbouwgroep_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: landbouwgroep_labelpoint
+      title: landbouwgroep_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - landbouwgroep_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_landbouwgroep_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: landsdeel_gegeneraliseerd
+      title: landsdeel_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - landsdeel_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_landsdeel_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: landsdeel_labelpoint
+      title: landsdeel_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - landsdeel_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_landsdeel_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: provincie_gegeneraliseerd
+      title: provincie_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - provincie_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_provincie_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: provincie_labelpoint
+      title: provincie_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - provincie_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_provincie_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: regionaalmeld_coordinatiepunt_gegeneraliseerd
+      title: regionaalmeld_coordinatiepunt_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - regionaalmeld_coordinatiepunt_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_regionaalmeld_coordinatiepunt_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: regionaalmeld_coordinatiepunt_labelpoint
+      title: regionaalmeld_coordinatiepunt_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - regionaalmeld_coordinatiepunt_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_regionaalmeld_coordinatiepunt_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: regionale_eenheid_gegeneraliseerd
+      title: regionale_eenheid_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - regionale_eenheid_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_regionale_eenheid_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: regionale_eenheid_labelpoint
+      title: regionale_eenheid_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - regionale_eenheid_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_regionale_eenheid_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: regionale_energiestrategie_gegeneraliseerd
+      title: regionale_energiestrategie_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - regionale_energiestrategie_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_regionale_energiestrategie_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: regionale_energiestrategie_labelpoint
+      title: regionale_energiestrategie_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - regionale_energiestrategie_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_regionale_energiestrategie_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: regioplus_arbeidsmarktregio_gegeneraliseerd
+      title: regioplus_arbeidsmarktregio_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - regioplus_arbeidsmarktregio_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_regioplus_arbeidsmarktregio_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: regioplus_arbeidsmarktregio_labelpoint
+      title: regioplus_arbeidsmarktregio_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - regioplus_arbeidsmarktregio_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_regioplus_arbeidsmarktregio_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: ressort_gegeneraliseerd
+      title: ressort_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - ressort_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_ressort_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: ressort_labelpoint
+      title: ressort_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - ressort_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_ressort_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: toeristengebied_gegeneraliseerd
+      title: toeristengebied_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - toeristengebied_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_toeristengebied_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: toeristengebied_labelpoint
+      title: toeristengebied_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - toeristengebied_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_toeristengebied_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: toeristengroep_gegeneraliseerd
+      title: toeristengroep_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - toeristengroep_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_toeristengroep_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: toeristengroep_labelpoint
+      title: toeristengroep_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - toeristengroep_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_toeristengroep_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: veiligheidsregio_gegeneraliseerd
+      title: veiligheidsregio_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - veiligheidsregio_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_veiligheidsregio_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: veiligheidsregio_labelpoint
+      title: veiligheidsregio_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - veiligheidsregio_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_veiligheidsregio_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: veiligthuisregio_gegeneraliseerd
+      title: veiligthuisregio_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - veiligthuisregio_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_veiligthuisregio_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: veiligthuisregio_labelpoint
+      title: veiligthuisregio_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - veiligthuisregio_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_veiligthuisregio_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: wijk_gegeneraliseerd
+      title: wijk_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - wijk_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_wijken
+        name: cbs_wijken
+        visualization: cbs_wijken.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_wijk_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - gm_code
+          - rubriek
+    - name: wijk_labelpoint
+      title: wijk_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - wijk_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_wijk_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - gm_code
+          - rubriek
+    - name: wijk_niet_gegeneraliseerd
+      title: wijk_niet_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - wijk_niet_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_wijken
+        name: cbs_wijken
+        visualization: cbs_wijken.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_wijk_2020_niet_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - gm_code
+          - rubriek
+    - name: zorgkantoorregio_gegeneraliseerd
+      title: zorgkantoorregio_gegeneraliseerd
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - zorgkantoorregio_gegeneraliseerd
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_gebiedsindeling
+        name: cbs_gebiedsindeling
+        visualization: cbs_gebiedsindeling.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_zorgkantoorregio_2020_gegeneraliseerd
+          geometryType: MultiPolygon
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek
+    - name: zorgkantoorregio_labelpoint
+      title: zorgkantoorregio_labelpoint
+      abstract: 'Deze service bevat de CBS Gebiedsindelingen van 2020. De volgende
+        gebiedsindelingen kunnen voorkomen: Gemeente Landsdeel Provincie Buurt COROP-gebied
+        GGD-regio NUTS1 NUTS2 NUTS3 Wijk COROP-plusgebied COROP-subgebied Landbouwgebied
+        Landbouwgroep RPA-gebied Toeristengroep Toeristengebied Arrondissementsgebied
+        KamervanKoophandelregio Regionale-Eenheid Veiligheidsregio Veiligthuisregio
+        Zorgkantoorregio Arbeidsmarktregio Regioplus-arbeidsmarktregio Jeugdregio
+        Ressort RES-regio Regionaalmeldco\xF6rdinatiepunt Regionale-energiestrategie
+        SubRES-regio'
+      visible: true
+      keywords:
+      - zorgkantoorregio_labelpoint
+      sourceMetadataIdentifier: 14076c36-c26d-2013-ac36-7e65f530188c
+      datasetMetadataIdentifier: effe1ab0-073d-437c-af13-df5c5e07d6cd
+      styles:
+      - title: Cbs_label
+        name: cbs_label
+        visualization: cbs_label.style
+      data:
+        gpkg:
+          s3Key: geopackages/cbs/gebiedsindelingen/2/cbsgebiedsindelingen2020.gpkg
+          table: cbs_zorgkantoorregio_2020_labelpoint
+          geometryType: Point
+          columns:
+          - id
+          - statcode
+          - jrstatcode
+          - statnaam
+          - rubriek

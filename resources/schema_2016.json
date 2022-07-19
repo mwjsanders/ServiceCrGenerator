@@ -1,0 +1,1774 @@
+{
+    "geopackage_validator_version": "0.6.4",
+    "projection": 28992,
+    "tables": [
+        {
+            "name": "cbs_arbeidsmarktregio_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_arbeidsmarktregio_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_arrondissementsgebied_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_arrondissementsgebied_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_buurt_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_buurt_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_coropgebied_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_coropgebied_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_coropplusgebied_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_coropplusgebied_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_coropsubgebied_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_coropsubgebied_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_gemeente_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_gemeente_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_ggdregio_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_ggdregio_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_jeugdregio_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_jeugdregio_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_kamervankoophandelregio_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_kamervankoophandelregio_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_landbouwgebied_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_landbouwgebied_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_landbouwgroep_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_landbouwgroep_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_landsdeel_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_landsdeel_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_nuts1_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_nuts1_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_nuts2_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_nuts2_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_nuts3_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_nuts3_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_provincie_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_provincie_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_regionale_eenheid_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_regionale_eenheid_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_regioplus_arbeidsmarktregio_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_regioplus_arbeidsmarktregio_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_ressort_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_ressort_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_rpagebied_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_rpagebied_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_toeristengebied_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_toeristengebied_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_toeristengroep_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_toeristengroep_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_veiligheidsregio_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_veiligheidsregio_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_wijk_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_wijk_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_zorgkantoorregio_2016_gegeneraliseerd",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "MULTIPOLYGON"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "cbs_zorgkantoorregio_2016_labelpoint",
+            "geometry_column": "geom",
+            "columns": [
+                {
+                    "name": "fid",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "geom",
+                    "type": "POINT"
+                },
+                {
+                    "name": "id",
+                    "type": "INTEGER64"
+                },
+                {
+                    "name": "statcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "jrstatcode",
+                    "type": "STRING"
+                },
+                {
+                    "name": "statnaam",
+                    "type": "STRING"
+                },
+                {
+                    "name": "rubriek",
+                    "type": "STRING"
+                }
+            ]
+        }
+    ]
+}
